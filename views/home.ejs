@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+<h1>Home</h1>
+<p><%= hsc %></p>
+<% 
+
+if (locals.posts){
+    
+    posts.forEach((i) =>{%>
+     <h1><%= i.title %></h1>
+     <p ><%= i.post.substring(0,100)+"..." %><a href= "/posts/<%=i.title%>">Read more</a></p>
+     <% }); 
+     
+      
+
+}
+    %>
+<%- include('partials/footer.ejs') %>
